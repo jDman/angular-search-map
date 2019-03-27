@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "angular-map-search"
+  "defaultProject": "angular-map-search",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
