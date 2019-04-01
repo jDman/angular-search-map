@@ -1,3 +1,4 @@
-<p>
-  search works!
-</p>
+<form novalidate [formGroup]="searchForm" (ngSubmit)="submitForm()">
+  <input type="text" formControlName="searchTerm" />
+  <button type="submit">Search</button>
+</form>

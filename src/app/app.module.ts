@@ -12,7 +12,6 @@ import { AppEffects } from './store/effects/app.effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { CoreModule } from './core/core.module';
 import { MapModule } from './map/map.module';
-import { SearchModule } from './search/search.module';
 import { ResultsModule } from './results/results.module';
 
 @NgModule({
@@ -30,8 +29,7 @@ import { ResultsModule } from './results/results.module';
     StoreRouterConnectingModule.forRoot(),
     CoreModule,
     MapModule,
-    ResultsModule,
-    SearchModule
+    ResultsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

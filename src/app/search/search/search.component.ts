@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'ams-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
+  @Output() searchSubmitted = new EventEmitter<FormGroup>();
 
-  constructor() { }
+  searchForm = this.fb.group({
+    searchTerm: ['']
+  });
 
-  ngOnInit() {
+  constructor(private fb: FormBuilder) {}
+
+  submitForm() {
+    this.searchSubmitted.emit(this.searchForm);
   }
-
 }
